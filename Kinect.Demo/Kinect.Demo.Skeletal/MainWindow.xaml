@@ -1,0 +1,14 @@
+﻿<Window x:Class="Kinect.Demo.Skeletal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <Canvas>
+            <Image Name="HeadImage" Source="\Resources\DavidsHead.gif" Opacity="1"/>
+            <Image Name="LeftHandImage" Source="\Resources\LeftHand.gif" Opacity="1"/>
+            <Image Name="RighthandImage"  Source="\Resources\RightHand.gif" Opacity="1"/>
+            <Image Name="LeftBootImage" Source="\Resources\LeftDiscoBoot.gif" Opacity="1"/>
+            <Image Name="RightBootImage"  Source="\Resources\RightDiscoBoot.gif" Opacity="1"/>
+        </Canvas>
+    </Grid>
+</Window>

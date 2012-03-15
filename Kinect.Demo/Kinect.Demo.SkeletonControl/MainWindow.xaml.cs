@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+using Coding4Fun.Kinect.Wpf;
+
+using Microsoft.Research.Kinect.Nui;
+
+namespace Kinect.Demo.SkeletonControl
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        #region --------------------- Member Variables ---------------------
+
+        // Kinect Runtime
+        private Runtime kinectRuntime;
+
+        #endregion
+
+        #region --------------------- Constructor ---------------------
+
+        /// <summary>
+        /// Initializes a new instance of the MainWindow class.
+        /// </summary>
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            SetupKinect();
+        }
+
+        #endregion
+
+        #region --------------------- Private Methods ---------------------
+
+        private void SetupKinect()
+        {
+            // Check to see if there are any Kinect devices connected.
+            if (Runtime.Kinects.Count == 0)
+            {
+                MessageBox.Show("No Kinect connected");
+            }
+            else
+            {
+                // Use first Kinect.
+                kinectRuntime = Runtime.Kinects[0];
+
+                // Initialize to return skeletal data.
+                kinectRuntime.Initialize(RuntimeOptions.UseSkeletalTracking);
+
+                // Attach to the event to receive skeleton frame data.
+                kinectRuntime.SkeletonFrameReady += KinectRuntime_SkeletonFrameReady;
+
+                kinectRuntime.SkeletonEngine.TransformSmooth = true;
+
+                TransformSmoothParameters parameters = new TransformSmoothParameters();
+                parameters.Smoothing = 0.5f;
+                parameters.Correction = 0.3f;
+                parameters.Prediction = 0.2f;
+                parameters.JitterRadius = .2f;
+                parameters.MaxDeviationRadius = 0.5f;
+
+                kinectRuntime.SkeletonEngine.SmoothParameters = parameters;
+
+                kinectRuntime.NuiCamera.ElevationAngle = 0;
+            }
+        }
+
+        #endregion
+
+        #region  --------------------- Event Handlers ---------------------
+
+        private void KinectRuntime_SkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
+        {
+            SkeletonFrame allSkeletons = e.SkeletonFrame;
+
+            // Get the first tracked skeleton.
+            skeleton.SkeletonData = (from s in allSkeletons.Skeletons
+                                     where s.TrackingState == SkeletonTrackingState.Tracked
+                                     select s).FirstOrDefault();
+        }
+
+        #endregion
+    }
+}

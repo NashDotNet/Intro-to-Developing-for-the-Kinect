@@ -1,0 +1,21 @@
+﻿<Window x:Class="Kinect.Demo.UserInteraction.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Background="#1E1C37"
+        xmlns:Controls="clr-namespace:Coding4Fun.Kinect.Wpf.Controls;assembly=Coding4Fun.Kinect.Wpf" 
+        Title="MainWindow" Height="1045" Width="1680" Closing="Window_Closing" >
+    <Grid x:Name="theGrid">
+        <Canvas Background="Transparent">
+            <Controls:HoverButton Margin="0" Padding="0" x:Name="handCursor" ImageSize="64"                                            
+                                ImageSource="/Resources/Hand_Basic.png"  
+                                ActiveImageSource="/Resources/Hand_Basic.png" 
+                                TimeInterval="2000"  Canvas.Left="700" Canvas.Top="175" Panel.ZIndex="1000" />
+            <Image Name="EdwardButton" Source="\Resources\Team_Edward.jpg" Canvas.Top="300" Canvas.Left="200"/>
+            <Image Name="JacobButton" Source="\Resources\Team_Jacob.jpg" Canvas.Top="300" Canvas.Left="1000"/>
+            <Image Name="EdwardBella" Source="\Resources\Edward_Bella.jpg" Canvas.Top="300" Canvas.Left="575" Visibility="Hidden"/>
+            <Image Name="JacobBella" Source="\Resources\Jacob_Bella.jpg" Canvas.Top="300" Canvas.Left="575" Visibility="Hidden"/>
+        </Canvas>
+    </Grid>
+</Window>

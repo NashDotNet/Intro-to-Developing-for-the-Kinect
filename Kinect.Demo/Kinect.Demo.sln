@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.Camera", "Kinect.Demo.Camera\Kinect.Demo.Camera.csproj", "{D858E2FE-0EEB-4E1F-9809-26EBBE1759AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.Skeletal", "Kinect.Demo.Skeletal\Kinect.Demo.Skeletal.csproj", "{3F0735A1-82E8-4623-BA49-EBFD749B2B2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.DepthData", "Kinect.Demo.DepthData\Kinect.Demo.DepthData.csproj", "{259F69D8-AF1A-4325-B666-D35B3D4B3DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.SkeletalDots", "Kinect.Demo.SkeletalDots\Kinect.Demo.SkeletalDots.csproj", "{76DB70B4-EA72-4734-B04F-3D47252E80B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.UserInteraction", "Kinect.Demo.UserInteraction\Kinect.Demo.UserInteraction.csproj", "{CEF8EF4A-336F-4E58-B32A-1351B948C334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect.Demo.SkeletonControl", "Kinect.Demo.SkeletonControl\Kinect.Demo.SkeletonControl.csproj", "{D77326C6-E364-42B1-83AF-AEDE38CF28B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D858E2FE-0EEB-4E1F-9809-26EBBE1759AD}.Debug|x86.ActiveCfg = Debug|x86
+		{D858E2FE-0EEB-4E1F-9809-26EBBE1759AD}.Debug|x86.Build.0 = Debug|x86
+		{D858E2FE-0EEB-4E1F-9809-26EBBE1759AD}.Release|x86.ActiveCfg = Release|x86
+		{D858E2FE-0EEB-4E1F-9809-26EBBE1759AD}.Release|x86.Build.0 = Release|x86
+		{3F0735A1-82E8-4623-BA49-EBFD749B2B2F}.Debug|x86.ActiveCfg = Debug|x86
+		{3F0735A1-82E8-4623-BA49-EBFD749B2B2F}.Debug|x86.Build.0 = Debug|x86
+		{3F0735A1-82E8-4623-BA49-EBFD749B2B2F}.Release|x86.ActiveCfg = Release|x86
+		{3F0735A1-82E8-4623-BA49-EBFD749B2B2F}.Release|x86.Build.0 = Release|x86
+		{259F69D8-AF1A-4325-B666-D35B3D4B3DEB}.Debug|x86.ActiveCfg = Debug|x86
+		{259F69D8-AF1A-4325-B666-D35B3D4B3DEB}.Debug|x86.Build.0 = Debug|x86
+		{259F69D8-AF1A-4325-B666-D35B3D4B3DEB}.Release|x86.ActiveCfg = Release|x86
+		{259F69D8-AF1A-4325-B666-D35B3D4B3DEB}.Release|x86.Build.0 = Release|x86
+		{76DB70B4-EA72-4734-B04F-3D47252E80B2}.Debug|x86.ActiveCfg = Debug|x86
+		{76DB70B4-EA72-4734-B04F-3D47252E80B2}.Debug|x86.Build.0 = Debug|x86
+		{76DB70B4-EA72-4734-B04F-3D47252E80B2}.Release|x86.ActiveCfg = Release|x86
+		{76DB70B4-EA72-4734-B04F-3D47252E80B2}.Release|x86.Build.0 = Release|x86
+		{CEF8EF4A-336F-4E58-B32A-1351B948C334}.Debug|x86.ActiveCfg = Debug|x86
+		{CEF8EF4A-336F-4E58-B32A-1351B948C334}.Debug|x86.Build.0 = Debug|x86
+		{CEF8EF4A-336F-4E58-B32A-1351B948C334}.Release|x86.ActiveCfg = Release|x86
+		{CEF8EF4A-336F-4E58-B32A-1351B948C334}.Release|x86.Build.0 = Release|x86
+		{D77326C6-E364-42B1-83AF-AEDE38CF28B0}.Debug|x86.ActiveCfg = Debug|x86
+		{D77326C6-E364-42B1-83AF-AEDE38CF28B0}.Debug|x86.Build.0 = Debug|x86
+		{D77326C6-E364-42B1-83AF-AEDE38CF28B0}.Release|x86.ActiveCfg = Release|x86
+		{D77326C6-E364-42B1-83AF-AEDE38CF28B0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

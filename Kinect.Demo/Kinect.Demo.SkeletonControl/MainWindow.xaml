@@ -1,0 +1,9 @@
+﻿<Window x:Class="Kinect.Demo.SkeletonControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:s="clr-namespace:SoulSolutions.Kinect.Controls.Skeleton;assembly=SoulSolutions.Kinect.Controls.Skeleton"
+        Title="MainWindow" Height="480" Width="640">
+    <Grid>
+        <s:SkeletonControl x:Name="skeleton" />        
+    </Grid>
+</Window>
